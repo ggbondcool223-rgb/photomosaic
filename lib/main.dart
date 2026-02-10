@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:photo_mosaic/pages/mosaic_edit/mosaic_edit_binding.dart';
+import 'package:photo_mosaic/pages/mosaic_edit/mosaic_edit_view.dart';
+import 'package:photo_mosaic/pages/my_works/my_works_item.dart';
 import 'db_photo_mosaic/data.dart';
 import '../pages/home/home_binding.dart';
 import '../pages/home/home_view.dart';
@@ -68,7 +71,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
             useMaterial3: true,
           ),
-          initialRoute: '/home',
+          initialRoute: '/',
           getPages:Collage,
         );
       },
@@ -76,6 +79,11 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> Collage = [
+  GetPage(
+    name: '/',
+    page: () => const MosaicEditView(),
+    binding: MosaicEditBinding(),
+  ),
   GetPage(
     name: '/home',
     page: () => const HomeView(),
@@ -85,6 +93,10 @@ List<GetPage<dynamic>> Collage = [
     name: '/template_select',
     page: () => const TemplateSelectView(),
     binding: TemplateSelectBinding(),
+  ),
+  GetPage(
+    name: '/works_item',
+    page: () => const MyWorksItem(),
   ),
   GetPage(
     name: '/collage_edit',

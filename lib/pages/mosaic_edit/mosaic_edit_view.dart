@@ -11,8 +11,8 @@ class MosaicEditView extends GetView<MosaicEditLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.bejrlqwm.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.bmwp.value
+              ? const CircularProgressIndicator(color: Colors.black)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class MosaicEditView extends GetView<MosaicEditLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.xifkz();
+              controller.dkzc();
             },
             icon: const Icon(
               Icons.restart_alt,

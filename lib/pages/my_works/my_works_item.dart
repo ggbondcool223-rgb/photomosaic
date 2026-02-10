@@ -3,7 +3,9 @@ import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:get/get.dart';
 import '../mosaic_edit/mosaic_edit_logic.dart';
 
-class TimeOutReload extends GetView<MosaicEditLogic> {
+class MyWorksItem extends GetView<MosaicEditLogic> {
+  const MyWorksItem({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class TimeOutReload extends GetView<MosaicEditLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.tmkxzdhj.value)),
+              url: WebUri.uri(Uri.parse(controller.kfbalm.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,
